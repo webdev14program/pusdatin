@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md">
         <div class="alert alert-success" role="alert">
-            <h4 class="text-uppercase font-weight-bold text-center">IT SUPORT <br> PUSDATIN SALEMBA</h4>
+            <h4 class="text-uppercase font-weight-bold text-center">Cleaning Service <br> PUSDATIN SALEMBA</h4>
         </div>
     </div>
 </div>
@@ -46,7 +46,7 @@
                                 <td class=" text-uppercase">(+62) <?= $row['tlpn']; ?></td>
                                 <td>
                                     <h5 class="text-center">
-                                        <a class="btn btn-sm btn-primary text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/detail_it_suport/<?= $row['id_personil']; ?>">Detail</a>
+                                        <a class="btn btn-sm btn-primary text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/detail_cs/<?= $row['id_personil']; ?>">Detail</a>
                                     </h5>
                                 </td>
                         </tr>
@@ -65,23 +65,23 @@
                 <h5 class="modal-title text-white text-uppercase font-weight-bold" id="exampleModalLabel">IT SUPORT PUSDATIN SALEMBA</h5>
             </div>
             <div class="modal-body">
-                <?= form_open_multipart('Dashboard/simpan_it_suport'); ?>
+                <?= form_open_multipart('Dashboard/simpan_cs'); ?>
                 <div class="form-group">
                     <label>Fullname</label>
-                    <input type="text" name="nama" class="form-control">
+                    <input type="text" name="nama" class="form-control" require>
                 </div>
                 <div class="form-group">
                     <label>Phone</label>
-                    <input type="number" name="tlpn" class="form-control">
+                    <input type="number" name="tlpn" class="form-control" require>
                 </div>
 
                 <div class="form-group">
                     <label>Address</label>
-                    <input type="text" name="alamat" class="form-control">
+                    <input type="text" name="alamat" class="form-control" require>
                 </div>
                 <div class="form-group">
                     <label>Foto</label>
-                    <input type="file" name="gambar" class="form-control-file">
+                    <input type="file" name="gambar" class="form-control-file" require>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

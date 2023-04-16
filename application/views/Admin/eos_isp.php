@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md">
         <div class="alert alert-success" role="alert">
-            <h4 class="text-uppercase font-weight-bold text-center">EOS/ISP PUSDATIN SALEMBA</h4>
+            <h4 class="text-uppercase font-weight-bold text-center">EOS/ISP <br> PUSDATIN SALEMBA</h4>
         </div>
     </div>
 </div>

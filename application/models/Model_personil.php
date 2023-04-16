@@ -7,7 +7,8 @@ class Model_personil extends CI_Model
     {
         $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,leve_pusdatin.nama_level,personil_pusdatin.gambar FROM `personil_pusdatin`
 INNER JOIN leve_pusdatin
-ON personil_pusdatin.level=leve_pusdatin.id_level;";
+ON personil_pusdatin.level=leve_pusdatin.id_level
+ORDER BY leve_pusdatin.id_level ASC;";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
@@ -70,5 +71,55 @@ ON personil_pusdatin.level=leve_pusdatin.id_level
 WHERE personil_pusdatin.id_personil='$id_personl' AND personil_pusdatin.level=3003;";
         $query = $this->db->query($sql);
         return $query->row_array();
+    }
+
+    public function data_umum()
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE leve_pusdatin.id_level='4004';";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    public function detail_umum($id_personl)
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level,personil_pusdatin.gambar FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE personil_pusdatin.id_personil='$id_personl' AND personil_pusdatin.level=4004;";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function data_cs()
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE leve_pusdatin.id_level='5005';";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
+    public function detail_cs($id_personl)
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level,personil_pusdatin.gambar FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE personil_pusdatin.id_personil='$id_personl' AND personil_pusdatin.level=5005;";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    public function data_magang()
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE leve_pusdatin.id_level='6006';";
+        $query = $this->db->query($sql);
+        return $query->result_array();
     }
 }

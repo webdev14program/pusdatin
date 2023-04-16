@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md">
         <div class="alert alert-success" role="alert">
-            <h4 class="text-uppercase font-weight-bold text-center">IT SUPORT <br> PUSDATIN SALEMBA</h4>
+            <h4 class="text-uppercase font-weight-bold text-center">magang <br> PUSDATIN SALEMBA</h4>
         </div>
     </div>
 </div>
@@ -65,7 +65,7 @@
                 <h5 class="modal-title text-white text-uppercase font-weight-bold" id="exampleModalLabel">IT SUPORT PUSDATIN SALEMBA</h5>
             </div>
             <div class="modal-body">
-                <?= form_open_multipart('Dashboard/simpan_it_suport'); ?>
+                <?= form_open_multipart('Dashboard/simpan_magang'); ?>
                 <div class="form-group">
                     <label>Fullname</label>
                     <input type="text" name="nama" class="form-control">
