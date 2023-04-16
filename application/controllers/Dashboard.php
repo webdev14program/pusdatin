@@ -304,6 +304,15 @@ class Dashboard extends CI_Controller
         redirect('Dashboard/magang');
     }
 
+    public function detail_magang($id_personl)
+    {
+        $isi['personil'] = $this->Model_personil->detail_magang($id_personl);
+        $isi['content'] = 'Admin/detail_magang';
+        $this->load->view('Admin/templates/header');
+        $this->load->view('Admin/tampilan_dashboard', $isi);
+        $this->load->view('Admin/templates/footer');
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();

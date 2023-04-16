@@ -122,4 +122,14 @@ WHERE leve_pusdatin.id_level='6006';";
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+
+    public function detail_magang($id_personl)
+    {
+        $sql = "SELECT personil_pusdatin.id_personil,personil_pusdatin.nama,personil_pusdatin.tlpn,personil_pusdatin.alamat,leve_pusdatin.nama_level,personil_pusdatin.gambar FROM `personil_pusdatin`
+INNER JOIN leve_pusdatin
+ON personil_pusdatin.level=leve_pusdatin.id_level
+WHERE personil_pusdatin.id_personil='$id_personl' AND personil_pusdatin.level=6006;";
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
 }

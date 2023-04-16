@@ -46,7 +46,7 @@
                                 <td class=" text-uppercase">(+62) <?= $row['tlpn']; ?></td>
                                 <td>
                                     <h5 class="text-center">
-                                        <a class="btn btn-sm btn-primary text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/detail_it_suport/<?= $row['id_personil']; ?>">Detail</a>
+                                        <a class="btn btn-sm btn-primary text-uppercase font-weight-bold" href="<?= base_url() ?>Dashboard/detail_magang/<?= $row['id_personil']; ?>">Detail</a>
                                     </h5>
                                 </td>
                         </tr>
